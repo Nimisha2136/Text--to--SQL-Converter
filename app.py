@@ -1,8 +1,14 @@
 """Streamlit UI for the text-to-SQL agent.  Run: streamlit run app.py"""
 import os
-
 import pandas as pd
 import streamlit as st
+
+# Load Streamlit Cloud secrets into environment variables
+os.environ["LLM_PROVIDER"] = st.secrets.get("LLM_PROVIDER", "groq")
+os.environ["GROQ_API_KEY"] = st.secrets["GROQ_API_KEY"]
+os.environ["MODEL_NAME"] = st.secrets.get(
+    "MODEL_NAME", "openai/gpt-oss-120b"
+)
 
 from agent import DB_PATH, build_graph, read_schema
 
