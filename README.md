@@ -2,6 +2,7 @@
 
 Ask questions in plain English → an **agentic AI workflow** writes the SQL, checks it,
 runs it, fixes its own mistakes, and explains the result.
+🔗https://text--to--sql-converter-a2hasbxybgmmbaarmfqg6r.streamlit.app/
 
 ## Agentic AI framework used
 **LangGraph** (built on LangChain) models the agent as a graph of nodes with
